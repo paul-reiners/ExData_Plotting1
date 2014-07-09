@@ -17,7 +17,9 @@ format="%d/%m/%Y %H:%M:%S"
 household.power.consumption$DateTime <- 
         strptime(household.power.consumption$DateTime, format=format)
 
+png(file = "./plots/plot1.png", width = 480, height = 480)
 hist(household.power.consumption$Global_active_power, 
      main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)",
      col = "red")
+dev.off()
