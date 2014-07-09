@@ -15,7 +15,7 @@ load.data <- function() {
         household.power.consumption$Date <- NULL
         household.power.consumption$Time <- NULL
         format="%d/%m/%Y %H:%M:%S"
-        household.power.consumption$DateTime <- 
+        household.power.consumption$datetime <- 
                 strptime(household.power.consumption$DateTime, format=format)
 
         return(household.power.consumption)
